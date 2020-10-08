@@ -1,0 +1,97 @@
+truth table
+
+Q1A
+	*I will use '-' as negation symble
+	* & = conjunction symbol 
+
+S1:
+R	S	P	-R	-P	SV-P	-R V ( S V -P)
+T	T	T	F	F	T	T
+T	T	F	F	T	T	T
+T	F	T	F	F	T	T
+T	F	F	F	T	T	T
+F	T	T	T	F	F	T
+F	T	F	T	T	T	T
+F	F	T	T	F	F	T
+F	F	F	T	T	T	T
+
+S2:
+P	R	-P	-R	(-P V R)	(-P V -R)	(-P V R) & (-P V -R)
+T	T	F	F	T		F		F
+T	F	F	T	F		T		F
+F	T	T	F	T		T		T
+F	F	T	T	T		T		T
+
+S3:	
+P	S 	-P	-S	(-P V S)	(-P V -S)	(-P V S)&(-P V -S)
+T	T	F	F	T		F		F
+T	F	F	T	T		T		T
+F	T	T	F	T		T		T
+F	F	T	T	F		T		F
+
+S4:
+R	P	S	-S	(P V -S)	(R V (P V -S))
+T	T	T	F	T		T
+T	T	F	T	T		T
+T	F	T	F	F		T
+T	F	F	T	T		T
+F	T	T	F	T		T
+F	T	F	T	T		T
+F	F	T	F	F		F
+F	F	F	T	T		T
+
+(b) Personally I think that S2 and S3 ar equivalent. They have almost same result in truth table but 
+just ordering differently. 
+
+(c) For this question, I will provide two different answer due to various conbine with up(C) and below(C),I don't know
+is that up(C) and below(C) are point to same question.
+
+Answer version 1(if the up (c) are not linked with below(C)):
+	Here I couldn't finad a moudle for question state. By the instruction of question, there shoud be an result
+that shows only one row of T and other row of F. I don't have a moudle like that case. if the question is to find
+a moudle which have only one formula not satisfied. I would say it is S4.
+
+answer version 2(if the up (C) are linked with below (C)):
+
+P,Q |- P&Q
+	
+P	Q	P&Q	
+T	T	T	Satisfied -> -(P&Q) are not vaild
+T	F	F
+F	T	F
+F	F	F
+
+Question 2:
+	(a)
+	(b):	S5:((R→T)→((T∧¬R)∨S))
+		((-R V T)->((T∧-R) V S)) replace implication
+		((-RVT) -> ( (S V T) ∧ ( S V -R))	distribution 
+		-(-RVT)V((SVT)∧(SV-R))	replace implication
+		(--R∧-T) V ((S V T) ∧(S V -R)) de morgan's law
+		(R∧-T) V ((S V T) ∧(S V -R)) double negation
+		
+		
+		S6:((¬T→(S∧¬R))∨¬(R∨¬T))
+		(( --T V (S∧¬R))∨¬(R∨¬T)) replace implication 
+		((--T V S)∧(--T V -R)) ∨¬(R∨¬T))  distribution 
+		((--T V S)∧(--T V -R)) ∨ (-R∧--T)) de morgan's law
+		((T V S)∧(T V -R)) ∨ (-R∧T)) double negation
+		
+	(c):
+		S5:((R→T)→((T∧¬R)∨S))
+		((-R V T)->((T∧-R) V S)) replace implication
+		((-RVT) -> ( (S V T) ∧ ( S V -R))	distribution 
+		-(-RVT)V((SVT)∧(SV-R))	replace implication
+		(--R∧-T) V ((S V T) ∧(S V -R)) de morgan's law
+		(R∧-T) V ((S V T) ∧(S V -R)) double negation
+		((S V T) V (R∧-T)) ∧ ((S V -R) V(R∧-T)) distribution 
+		
+		S6:((¬T→(S∧¬R))∨¬(R∨¬T))
+		(( --T V (S∧¬R))∨¬(R∨¬T)) replace implication 
+		((--T V S)∧(--T V -R)) ∨¬(R∨¬T))  distribution 
+		((--T V S)∧(--T V -R)) ∨ (-R∧--T)) de morgan's law
+		((T V S)∧(T V -R)) ∨ (-R∧T)) double negation
+		((T V S)∨ (-R∧T)) ∧((T V -R)∨(-R∧T)) distribution 
+
+		
+		
